@@ -5,7 +5,7 @@ var router = express.Router();
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'daaadmin',
-  port: 3306,
+  port: 4896,
   password: 'gow3.tree',
   database: 'daa'
 });
