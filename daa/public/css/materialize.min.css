@@ -3,6 +3,7 @@
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
+ .mdl-badge[data-badge]:after {right: -12px!important;}
  .main-container {
     display: grid;
     grid-gap: 5px;

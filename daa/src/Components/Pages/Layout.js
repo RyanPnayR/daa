@@ -3,14 +3,21 @@ import { NavBar } from '../UI/NavBar';
 import { Header } from '../UI/Header';
 import { NavBarBottom } from '../UI/NavBarBottom';
 import { Footer } from '../UI/Footer';
-import { Cart } from '../UI/Cart';
+import Cart from '../UI/Cart';
 import ProductPage  from './ProductPage';
 
 export class Layout extends Component {
     render() {
-        return <div>
+        return (
+        <div>
+            <NavBar>
+                <li>
+                    <Cart/>
+                </li>
+            </NavBar>
             <ProductPage />
-        </div>;
+        </div>
+            );
     }
 }
 

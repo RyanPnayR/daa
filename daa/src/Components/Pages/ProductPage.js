@@ -15,7 +15,7 @@ class ProductPage extends Component {
         const {fetchAllProducts} = this.props;
         console.log( products);
         if (!products.length) {
-          return <button onClick={fetchAllProducts}>load tweets</button>
+          return <div></div>;
         }
     
         const groupSize = 4;
