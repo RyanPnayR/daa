@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Product } from '../UI/Product';
-import { fetchCart } from '../../Actions/cartActions';
 import { connect } from "react-redux";
 import PropTypes from 'prop-types';
 
@@ -24,14 +23,14 @@ class Cart extends Component {
         }
         return (
         <div onClick={this.handleClick.bind(this)}>
-            <a><i><span id="notifica" data-badge="1" className="icon material-icons mdl-badge">shop</span></i></a>
+            <a><i><span id="notifica" data-badge={this.props.count} className="icon material-icons mdl-badge">shop</span></i></a>
         </div>
         );
     }
 }
 
 Cart.propTypes = {
-    fetchCart: PropTypes.func,
+    
 }
 const mapStateToProps = state => {
     return {
@@ -42,7 +41,7 @@ const mapStateToProps = state => {
   
   const mapDispatchToProps = dispatch => {
     return {
-        fetchCart : dispatch(fetchCart()),
+       
     }
   }
   

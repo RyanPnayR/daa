@@ -6,36 +6,14 @@ export default function reducer(state = {
     error: null,
 }, action) {
     switch (action.type) {
-        case "FETCH_CART":
-            {
-                return { ...state,
-                    fetching: true
-                }
-            }
-        case "FETCH_CART_REJECTED":
-            {
-                return { ...state,
-                    fetching: false,
-                    error: action.payload
-                }
-            }
-        case "FETCH_CART_FULFILLED":
-            {
-                return {
-                    ...state,
-                    fetching: false,
-                    fetched: true,
-                    products: action.payload,
-                    count: action.payload.length,
-                }
-            }
         case "ADD_CART":{
-            return {
-                ...state,
-                products: action.payload,
-                count: action.payload.length,
+            const ct = state.count + 1;
+            return { ...state, 
+                count: ct
             }
         }
+        default: {
+            return state;
     }
-    return state;
+}
 };

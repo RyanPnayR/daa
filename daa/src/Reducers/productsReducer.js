@@ -1,5 +1,6 @@
 export default function reducer(state = {
     products: [],
+    groupSize: 4,
     fetching: false,
     fetched: false,
     error: null,
@@ -26,7 +27,8 @@ export default function reducer(state = {
                     fetched: true,
                     products: action.payload,
                 }
-            }
-    }
-    return state;
-};
+           }
+        default: {
+            return state;
+        }
+    }};
